@@ -8,10 +8,18 @@ main = do
     -- sanaLista tyyppiä IO String muutetaan wordList-sanalistaksi tyyppiä String
     -- words -apufunktion avulla
     let wordList = words sanalista
+    -- let wordList = lines sanalista
     print ("Annoit sanaluettelon: " ++ show wordList)
     -- käännä sanaluettelo reverse-funktion avulla
+    print ("Käännetty sanaluettelo on\n")
     let reversedList = reverse wordList
-    print("Käännetty sanaluettelo on: " ++ show reversedList)
+    reverseLines reversedList
     
     putStrLn "\nTehtävä 5 - Ratkaisun loppu - Mika Huttunen"
+
+reverseWords :: String -> String
+reverseWords = unwords . map reverse . words 
+
+reverseLines :: [String] -> IO () 
+reverseLines = mapM_ (putStr . show . reverseWords)
 
