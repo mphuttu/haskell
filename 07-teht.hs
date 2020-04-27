@@ -1,5 +1,6 @@
 import Data.String
 import Data.List 
+
 main :: IO()
 main = do
     putStrLn "Tehtävä 7 - Poista listasta saman alkion peräkkäiset esiintymät. \n"
@@ -7,11 +8,12 @@ main = do
     putStrLn "ja vain yksi arvo jää jäljelle. Listan elementtien järjestys ei saa muuttua. \n"
     print "Anna sana >"
     sanalista <- getLine
-    print ("Annoit sanaluettelon: " ++ show sanalista)
+    print ("Annoit sanaluettelon: " ++ sanalista)
     -- poistetaan peräkkäiset esiintymät
     print ("Peräkkäisten merkkien poistamisen jälkeen sana on\n")
     let removedChars = remdups sanalista
-    print(show removedChars)
+    -- print(show removedChars)
+    putStrLn $ removedChars
     
     putStrLn "\nTehtävä 7 - Ratkaisun loppu - Mika Huttunen"
 
@@ -21,7 +23,7 @@ fnr x xs
  | x == head xs = xs
  | otherwise = x:xs
 
-
+-- poista duplikaatit
 remdups :: (Eq a) => [a] -> [a]
 remdups [] = []
 remdups ys = foldr fnr [] ys
