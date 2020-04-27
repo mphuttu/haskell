@@ -3,15 +3,15 @@ import Data.List
 main :: IO()
 main = do
     putStrLn "Tehtävä 5 - Käännä listan sisältö\n"
-    print "Anna sanalista erotuksena väli >"
+    putStrLn "Anna sanalista erotuksena väli >\n"
     sanalista <- getLine
     -- sanaLista tyyppiä IO String muutetaan wordList-sanalistaksi tyyppiä String
     -- words -apufunktion avulla
     let wordList = words sanalista
     -- let wordList = lines sanalista
-    print ("Annoit sanaluettelon: " ++ show wordList)
+    print ("Annoit sanaluettelon: " ++ sanalista)
     -- käännä sanaluettelo reverse-funktion avulla
-    print ("Käännetty sanaluettelo on\n")
+    putStrLn "Käännetty sanaluettelo on"
     let reversedList = reverse wordList
     reverseLines reversedList
     
@@ -21,5 +21,5 @@ reverseWords :: String -> String
 reverseWords = unwords . map reverse . words 
 
 reverseLines :: [String] -> IO () 
-reverseLines = mapM_ (putStr . show . reverseWords)
+reverseLines = mapM_ (putStr . filter (/= '"') . show . reverseWords)
 
