@@ -1,5 +1,6 @@
 import Data.String
 import Data.List 
+import Data.Char
 main :: IO()
 main = do
     putStrLn "Tehtävä 6 - Tutki, onko lista palindromi\n"
@@ -15,5 +16,18 @@ main = do
     
     putStrLn "\nTehtävä 6 - Ratkaisun loppu - Mika Huttunen"
 
+stripWhiteSpace :: String -> String
+stripWhiteSpace text = filter (not . isSpace) text 
+
+stripPunctuation :: String -> String 
+stripPunctuation text = filter ( not . isPunctuation) text 
+
+toLowerCase :: String -> String
+toLowerCase text = map toLower text 
+
+preProcess :: String -> String 
+preProcess = stripWhiteSpace . stripPunctuation . toLowerCase
+
 isPalindrome :: String -> Bool
-isPalindrome word = word == reverse word
+isPalindrome text = cleanText == reverse cleanText
+  where cleanText = preProcess text
