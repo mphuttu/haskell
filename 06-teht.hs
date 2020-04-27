@@ -6,13 +6,13 @@ main = do
     putStrLn "Tehtävä 6 - Tutki, onko lista palindromi\n"
     print "Anna tutkittava sana---kerrotaan, onko sana palindromi >"
     sana <- getLine
-    print ("Annoit sanan: " ++ show sana)
+    print ("Annoit sanan: " ++ sana)
     -- Tulos
-    print ("Nyt antamasi sana ")
+    putStrLn "Nyt antamasi sana "
     let response = if isPalindrome sana 
                    then "ON palindromi!"
                    else "EI ole palindromi."
-    print response
+    putStrLn $ response
     
     putStrLn "\nTehtävä 6 - Ratkaisun loppu - Mika Huttunen"
 
