@@ -10,7 +10,7 @@ main = do
     -- luku x
     putStrLn "Anna  kokonaisluku >"
     strLuku <- getLine
-    print("Annoit luvun: " ++ strLuku) 
+    putStrLn("Annoit luvun: " ++ strLuku) 
     let nLuku = (read strLuku :: Integer)
     -- onko luku alkuluku
     if isPrime nLuku

@@ -5,12 +5,8 @@ main = do
     putStrLn "Tehtävä 10 - Poista listasta joka k:s elementti\n"
     print "Anna lista >"
     sanalista <- getLine
-    -- sanaLista tyyppiä IO String muutetaan wordList-sanalistaksi tyyppiä String
-    -- words -apufunktion avulla
-    -- let wordList = words sanalista
-    -- let wordList = lines sanalista
-    print ("Annoit sanaluettelon: " ++ sanalista)
-    putStrLn "Kuinka monennen elementin haluat poistaa ?"
+    putStrLn ("Annoit sanaluettelon: " ++ sanalista)
+    putStrLn "Kuinka monennen elementin (joka toisen, joka kolmannen, ...) haluat poistaa ?"
     putStrLn "Anna luku > "
     strLkm <- getLine
     let nLkm = read strLkm
@@ -27,7 +23,7 @@ main = do
 del_every_nth :: Int -> [a] -> [a]
 del_every_nth n = concat . map init . groupMy n 
 
--- ryhmitellään lista n:än pituiseen osaan 
+-- ryhmitellään lista n:än pituisiin osiin 
 groupMy :: Int -> [a] -> [[a]] 
 groupMy n [] = []
 groupMy n xs = take n xs : groupMy n (drop n xs)

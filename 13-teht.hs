@@ -5,16 +5,12 @@ main = do
     putStrLn "Tehtävä 13 - Kierrä listaa n paikkaa vasemmalle"
     putStrLn "Anna lista (merkkijono yhteen kirjoitettuna) >"
     sanalista <- getLine
-    -- sanaLista tyyppiä IO String muutetaan wordList-sanalistaksi tyyppiä String
-    -- words -apufunktion avulla
-    -- let wordList = words sanalista
-    -- let wordList = lines sanalista
-    print ("Annoit merkkijonon: " ++ sanalista)
+    putStrLn ("Annoit merkkijonon: " ++ sanalista)
     -- listan pituus
     let nLen = length sanalista 
-    print("Antamasi merkkijonon pituus on " ++  show nLen)
+    putStrLn("Antamasi merkkijonon pituus on " ++  show nLen)
     putStrLn "Mistä kohdasta haluat alkaa kiertää vasemmalle antamasi merkkijonon?"
-    print ("Anna luku, suurempi kuin 0 ja pienempi kuin " ++ show nLen)
+    putStrLn ("Anna luku, suurempi kuin 0 ja pienempi kuin " ++ show nLen)
     strLkm <- getLine
     let nLkm = read strLkm
     putStrLn "Kierron jälkeen muuntuu merkkijono muotoon"

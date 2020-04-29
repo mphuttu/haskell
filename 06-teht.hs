@@ -4,9 +4,9 @@ import Data.Char
 main :: IO()
 main = do
     putStrLn "Tehtävä 6 - Tutki, onko lista palindromi\n"
-    print "Anna tutkittava sana---kerrotaan, onko sana palindromi >"
+    putStrLn "Anna tutkittava sana---kerrotaan, onko sana palindromi >"
     sana <- getLine
-    print ("Annoit sanan: " ++ sana)
+    putStrLn ("Annoit sanan: " ++ sana)
     -- Tulos
     putStrLn "Nyt antamasi sana "
     let response = if isPalindrome sana 

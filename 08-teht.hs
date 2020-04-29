@@ -5,11 +5,7 @@ main = do
     putStrLn "Tehtävä 8 - Tuplaa listan sisältö\n"
     print "Anna lista >"
     sanalista <- getLine
-    -- sanaLista tyyppiä IO String muutetaan wordList-sanalistaksi tyyppiä String
-    -- words -apufunktion avulla
-    -- let wordList = words sanalista
-    -- let wordList = lines sanalista
-    print ("Annoit sanaluettelon: " ++ sanalista)
+    putStrLn ("Annoit sanaluettelon: " ++ sanalista)
     -- tuplataan alkiot
     putStrLn "Tuplattu sanaluettelo on"
     let doubledList = map (repeatMine 2) sanalista

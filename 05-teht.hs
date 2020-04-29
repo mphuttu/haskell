@@ -9,7 +9,7 @@ main = do
     -- words -apufunktion avulla
     let wordList = words sanalista
     -- let wordList = lines sanalista
-    print ("Annoit sanaluettelon: " ++ sanalista)
+    putStrLn ("Annoit sanaluettelon: " ++ sanalista)
     -- käännä sanaluettelo reverse-funktion avulla
     putStrLn "Käännetty sanaluettelo on"
     let reversedList = reverse wordList

@@ -6,19 +6,15 @@ main = do
     putStrLn "alkaen listan paikasta i ja päättyen paikkaan j\n"
     putStrLn "Anna lista (merkkijono yhteen kirjoitettuna) >"
     sanalista <- getLine
-    -- sanaLista tyyppiä IO String muutetaan wordList-sanalistaksi tyyppiä String
-    -- words -apufunktion avulla
-    -- let wordList = words sanalista
-    -- let wordList = lines sanalista
-    print ("Annoit merkkijonon: " ++ sanalista)
+    putStrLn ("Annoit merkkijonon: " ++ sanalista)
     -- listan pituus
     let nLen = length sanalista 
-    print("Antamasi merkkijonon pituus on " ++  show nLen)
+    putStrLn("Antamasi merkkijonon pituus on " ++  show nLen)
     putStrLn "Mistä kohdasta haluat jakaa antamasi merkkijonon?"
-    print ("Anna luku, suurempi kuin 0 ja pienempi kuin " ++ show nLen)
+    putStrLn ("Anna luku, suurempi kuin 0 ja pienempi kuin " ++ show nLen)
     strLkmFirst <- getLine
     let nLkmFirst = read strLkmFirst
-    print ("Anna luku, suurempi kuin " ++ show nLkmFirst ++ " ja pienempi kuin " ++ show nLen)
+    putStrLn ("Anna luku, suurempi kuin " ++ show nLkmFirst ++ " ja pienempi kuin " ++ show nLen)
     strLkmSec <- getLine
     let nLkmSec = read strLkmSec
     -- otetaan osajono merkkijonosta alkaen indeksin kohdasta i-1 ja 

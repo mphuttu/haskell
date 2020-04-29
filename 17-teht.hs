@@ -18,16 +18,16 @@ main = do
                                           else fmap (line:) getStrList
     -}
     strList <- getUserLines
-    print("Annoit listan: " ++ show strList) 
+    putStrLn("Annoit listan: " ++ show strList) 
     putStrLn "Kun tämä lista laitetaan aakkosjärjestykseen on uusi lista: "
     -- käytetään Data.List:in sort-funktiota
     let sortedListA = sort strList
-    print(show sortedListA)
+    putStrLn $ show sortedListA
     putStrLn "Kun lista järjestetään pituuden mukaan saadaan: "
     let sortedList = sortBy lengthThenAZ strList
     -- käytetään valmiita funktioita
     -- print $ listStrings strList
-    print(show sortedList)
+    putStrLn $ show sortedList
     putStrLn "\nTehtävä 17 - Ratkaisun loppu - Mika Huttunen"
 
 

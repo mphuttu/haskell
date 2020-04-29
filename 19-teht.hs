@@ -5,16 +5,16 @@ main = do
     -- luku a
     putStrLn "Anna  kokonaisluku >"
     strLuku <- getLine
-    print("Annoit luvun: " ++ strLuku) 
+    putStrLn("Annoit luvun: " ++ strLuku) 
     let nLuku = (read strLuku :: Integer)
      -- luku b
     putStrLn "Anna toinen kokonaisluku >"
     strLukuKaks <- getLine
-    print("Annoit luvun: " ++ strLukuKaks) 
+    putStrLn("Annoit luvun: " ++ strLukuKaks) 
     let nLukuKaks = (read strLukuKaks :: Integer)
     -- lukujen suurin yhteinen jakaja
     let nSyt = syt nLuku nLukuKaks 
-    print("Lukujen " ++ strLuku ++ " ja " ++ strLukuKaks ++ " suurin yhteinen jakaja on " ++ show nSyt)
+    putStrLn("Lukujen " ++ strLuku ++ " ja " ++ strLukuKaks ++ " suurin yhteinen jakaja on " ++ show nSyt)
     putStrLn "\nTehtävä 19 - Ratkaisun loppu - Mika Huttunen"
 
 syt a b

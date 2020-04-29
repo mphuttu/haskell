@@ -7,19 +7,16 @@ main = do
     -- luku x
     putStrLn "Anna aloittava luku x:"
     strX <- getLine
-    print ("Annoit luvun: " ++ strX)
+    putStrLn ("Annoit luvun: " ++ strX)
     let nX = (read strX :: Int)
     -- luku y
-    print("Anna lopettava luku y > " ++ strX)
+    putStrLn ("Anna lopettava luku y > " ++ strX)
     strY <- getLine
-    print ("Annoit luvun: " ++ strY)
+    putStrLn ("Annoit luvun: " ++ strY)
     let nY = (read strY :: Int)
-    print ("Kokonaisluvut " ++ strX ++ ", ... , " ++ strY ++ " ovat: ")
+    putStrLn ("Kokonaisluvut " ++ strX ++ ", ... , " ++ strY ++ " ovat: ")
     mapM_ (\i -> putStr (show i ++ " ")) [nX..nY]
-    -- let afterList = insertEl charAdd sanalista nLkm
-    -- print $ afterList
-    -- putStrLn $ afterList
-    -- print $ (sanalista !! (nLkm-1), afterList)   
+      
     putStrLn "\nTehtävä 16 - Ratkaisun loppu - Mika Huttunen"
 
 

@@ -3,16 +3,15 @@ import Data.List
 
 main :: IO()
 main = do
-    putStrLn "Tehtävä 7 - Poista listasta saman alkion peräkkäiset esiintymät. \n"
-    putStrLn "Jos lista sisältää samoja arvo peräkkäin, poistetaan ylimääräiset esiintymät \n"
-    putStrLn "ja vain yksi arvo jää jäljelle. Listan elementtien järjestys ei saa muuttua. \n"
-    print "Anna sana >"
+    putStrLn "Tehtävä 7 - Poista listasta saman alkion peräkkäiset esiintymät. "
+    putStrLn "Jos lista sisältää samoja arvo peräkkäin, poistetaan ylimääräiset esiintymät "
+    putStrLn "ja vain yksi arvo jää jäljelle. Listan elementtien järjestys ei saa muuttua."
+    putStrLn "Anna sana >"
     sanalista <- getLine
-    print ("Annoit sanaluettelon: " ++ sanalista)
+    putStrLn ("Annoit sanaluettelon: " ++ sanalista)
     -- poistetaan peräkkäiset esiintymät
-    print ("Peräkkäisten merkkien poistamisen jälkeen sana on\n")
+    putStrLn ("Peräkkäisten merkkien poistamisen jälkeen sana on\n")
     let removedChars = remdups sanalista
-    -- print(show removedChars)
     putStrLn $ removedChars
     
     putStrLn "\nTehtävä 7 - Ratkaisun loppu - Mika Huttunen"
