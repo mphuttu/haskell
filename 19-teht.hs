@@ -15,7 +15,7 @@ main = do
     -- lukujen suurin yhteinen jakaja
     let nSyt = syt nLuku nLukuKaks 
     print("Lukujen " ++ strLuku ++ " ja " ++ strLukuKaks ++ " suurin yhteinen jakaja on " ++ show nSyt)
-    putStrLn "\nTehtävä 18 - Ratkaisun loppu - Mika Huttunen"
+    putStrLn "\nTehtävä 19 - Ratkaisun loppu - Mika Huttunen"
 
 syt a b
   | b == 0 =a 
